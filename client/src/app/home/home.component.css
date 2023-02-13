@@ -1,0 +1,12 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.card-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+mat-card {
+  margin: 0 8px;
+}

@@ -1,0 +1,27 @@
+<div *ngIf="loadedData">
+  <div class="card-container">
+    <mat-card *ngFor="let reservation of loadedData.result">
+      <mat-card-content>
+        <p>First name: {{reservation.firstName}}</p>
+        <p>Last name: {{reservation.lastName}}</p>
+        <p>CNP: {{reservation.cnp}}</p>
+        <p>Phone: {{reservation.phoneNumber}}</p>
+        <p>Room no: {{reservation.roomNumber}}</p>
+        <p>Start: {{reservation.startDate | date:'medium'}}</p>
+        <p>End: {{reservation.endDate | date:'medium'}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="warm" [routerLink] = "'/' + reservation.id">Edit</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <mat-paginator 
+              #paginator
+              (page)="handlePageEvent($event)"
+              [length]="loadedData.totalCount"
+              [pageSize]="loadedData.pageSize"
+              [pageSizeOptions]="[]"
+              [pageIndex]="pageIndex"
+              aria-label="Select page">
+  </mat-paginator>
+</div>

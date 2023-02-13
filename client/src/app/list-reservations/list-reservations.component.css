@@ -1,0 +1,10 @@
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+mat-card {
+  margin: 8px;
+  width: 250px;
+  word-break: break-all;
+}

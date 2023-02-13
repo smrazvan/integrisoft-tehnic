@@ -1,0 +1,12 @@
+
+mat-form-field {
+  margin: 7px;
+}
+
+.ngx-timepicker-field {
+  display: inline-block;
+}
+
+.dates {
+  display: flex;
+}
